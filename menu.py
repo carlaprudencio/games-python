@@ -1,21 +1,21 @@
-import adivinhacao
-import forca
+import guess_the_number
+import hang_man
 
-def menu_escolha():
+def menu():
     print("--------------------------------")
     print("Bem vindo! Escolha seu jogo!")
     print("--------------------------------")
 
     print("1 - Adivinhação, 2 - Forca")
-    jogo_escolhido = int(input("Digite o número do jogo escolhido: "))
+    chosen_game = int(input("Digite o número do jogo escolhido: "))
 
 
-    if(jogo_escolhido == 1):
+    if(chosen_game == 1):
         print("Jogo escolhido: Adivinhação")
-        adivinhacao.jogar()
-    elif(jogo_escolhido == 2):
+        guess_the_number.play()
+    elif(chosen_game == 2):
         print("Jogo escolhido: Forca")
-        forca.jogar()
+        hang_man.play()
 
 if(__name__ == "__main__"):
-    menu_escolha()
+    menu()
